@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Garage</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+<body>
+    
+    <nav class="navbar">
+        <a href="#" class="logo">Logo</a>
+        <div class="menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        }
+    </script>
+   
+
+<% for (let x = 0; x < cars.length; x++){%>
+    <div class="card">
+        <img src = <%= cars[x].ImageURL %> />
+        <h1><%= cars[x].CarName %></h3>
+        <p<%= cars[x].price %>p>
+        <p<%= cars[x].ForSale %></p>
+
+        <p>Username: RareFinds</p>
+        <p>For Sale: Yes</p>
+    </div>
+        <% } %>
+</body>
+</html>
