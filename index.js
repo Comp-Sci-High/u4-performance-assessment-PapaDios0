@@ -32,7 +32,7 @@ const mainGarage = {
       "Price": 13000000,
       "ForSale": false,
       "Description": "A collaboration between Aston Martin and Zagato, built for performance and beauty.",
-      "ImageURL": "https://example.com/astonmartindb4.jpg"
+      "ImageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYzUfU56JlOP25gI-pqJimCSkzA159iIqqhA&s"
     },
     {
       "Username": "SpeedyCollector",
@@ -42,7 +42,7 @@ const mainGarage = {
       "Price": 20000000,
       "ForSale": true,
       "Description": "One of the fastest naturally aspirated cars, built to honor McLaren's Le Mans victory.",
-      "ImageURL": "https://example.com/mclarenf1lm.jpg"
+      "ImageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRzUUpH7JQE06bF3EUHgGyGxRLIDK_96UJpQ&s"
     },
     {
       "Username": "VintageVibes",
@@ -52,7 +52,7 @@ const mainGarage = {
       "Price": 1500000,
       "ForSale": false,
       "Description": "Famous for its gullwing doors, this Mercedes is a timeless classic.",
-      "ImageURL": "https://example.com/mercedes300sl.jpg"
+      "ImageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbcJzruZEPdZXlKksDL_B0pksETvSPkoHi2g&s"
     },
     {
       "Username": "HiddenGems",
@@ -62,7 +62,7 @@ const mainGarage = {
       "Price": 16000000,
       "ForSale": true,
       "Description": "A dominant race car that cemented Porsche's place in endurance racing history.",
-      "ImageURL": "https://example.com/porsche917k.jpg"
+      "ImageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_lxznCJeRyCryOTPUDq7em2JcBjLbOMG8Jw&s"
     },
     {
       "Username": "ExoticDreams",
@@ -72,7 +72,7 @@ const mainGarage = {
       "Price": 3500000,
       "ForSale": false,
       "Description": "The car that defined the supercar genre with its revolutionary mid-engine design.",
-      "ImageURL": "https://example.com/lambomiura.jpg"
+      "ImageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyEQFo3gSoW4OXxF7uyNvrzaYxdcX_k4Gtrg&s"
     },
     {
       "Username": "OldSchoolRides",
@@ -82,7 +82,7 @@ const mainGarage = {
       "Price": 2500000,
       "ForSale": true,
       "Description": "A muscular, lightweight sports car that remains an American icon.",
-      "ImageURL": "https://example.com/shelbycobra427.jpg"
+      "ImageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzPZUYj0NChWrEjM-wRcbDNJWP8WkSZPctYw&s"
     },
     {
       "Username": "JDMKing",
@@ -92,7 +92,7 @@ const mainGarage = {
       "Price": 1200000,
       "ForSale": false,
       "Description": "Japan’s first supercar, blending elegance and performance.",
-      "ImageURL": "https://example.com/toyota2000gt.jpg"
+      "ImageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGSy5kBrVxmeCrhrOQlYCIg2AE4W9JBrRYew&s"
     },
     {
       "Username": "LeMansLegend",
@@ -102,7 +102,7 @@ const mainGarage = {
       "Price": 9000000,
       "ForSale": true,
       "Description": "Built to defeat Ferrari at Le Mans, a true racing legend.",
-      "ImageURL": "https://example.com/fordgt40.jpg"
+      "ImageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeGydzwEhVOeAwbUHWaxCc3DOnOI29uJTbOw&s"
     }
   ]
 }
@@ -117,6 +117,10 @@ const mainGarage = {
 
 
   app.use(express.static(__dirname +"/public"))
+
+  app.get('/:id', (req, res) =>{
+    const car = req.params.car
+});
 
   app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
